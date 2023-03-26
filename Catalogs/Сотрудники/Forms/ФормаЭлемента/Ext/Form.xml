@@ -1,98 +1,103 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Group>AlwaysHorizontal</Group>
+	<ScalingMode>Normal</ScalingMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<PictureField name="СсылкаНаКартинку" id="33">
-			<DataPath>СсылкаНаКартинку</DataPath>
-			<HorizontalStretch>false</HorizontalStretch>
-			<VerticalStretch>false</VerticalStretch>
-			<Hyperlink>true</Hyperlink>
-			<ContextMenu name="СсылкаНаКартинкуКонтекстноеМеню" id="34"/>
-			<ExtendedTooltip name="СсылкаНаКартинкуРасширеннаяПодсказка" id="35"/>
-			<Events>
-				<Event name="Click">СсылкаНаКартинкуНажатие</Event>
-			</Events>
-		</PictureField>
-		<CommandBar name="Группа1" id="31">
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="32"/>
-		</CommandBar>
+		<UsualGroup name="Группа1" id="25">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<PictureField name="СсылкаНаКартинку" id="22">
+					<DataPath>СсылкаНаКартинку</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<PictureSize>AutoSize</PictureSize>
+					<ImageScale>30</ImageScale>
+					<Hyperlink>true</Hyperlink>
+					<NonselectedPictureText>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фото сотрудника</v8:content>
+						</v8:item>
+					</NonselectedPictureText>
+					<ContextMenu name="СсылкаНаКартинкуКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СсылкаНаКартинкуРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="Click">СсылкаНаФотоНажатие</Event>
+					</Events>
+				</PictureField>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
+			<Visible>false</Visible>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ФИО</v8:content>
-				</v8:item>
-			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="Email" id="7">
-			<DataPath>Объект.Email</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="EmailКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="EmailРасширеннаяПодсказка" id="9"/>
-		</InputField>
-		<InputField name="Оклад" id="36">
-			<DataPath>Объект.Оклад</DataPath>
-			<ContextMenu name="ОкладКонтекстноеМеню" id="37"/>
-			<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="38"/>
-			<Events>
-				<Event name="OnChange">ОкладПриИзменении</Event>
-			</Events>
-		</InputField>
-		<InputField name="Стаж" id="10">
-			<DataPath>Объект.Стаж</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="СтажКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="СтажРасширеннаяПодсказка" id="12"/>
-		</InputField>
-		<InputField name="Должность" id="16">
-			<DataPath>Объект.Должность</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДолжностьКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="18"/>
-			<Events>
-				<Event name="OnChange">ДолжностьПриИзменении</Event>
-			</Events>
-		</InputField>
-		<InputField name="ДатаРождения" id="19">
-			<DataPath>Объект.ДатаРождения</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="20"/>
-			<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="21"/>
-		</InputField>
-		<InputField name="АдресПрописки" id="22">
-			<DataPath>Объект.АдресПрописки</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="АдресПропискиКонтекстноеМеню" id="23"/>
-			<ExtendedTooltip name="АдресПропискиРасширеннаяПодсказка" id="24"/>
-		</InputField>
-		<InputField name="НомерТелефона" id="25">
-			<DataPath>Объект.НомерТелефона</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НомерТелефонаКонтекстноеМеню" id="26"/>
-			<ExtendedTooltip name="НомерТелефонаРасширеннаяПодсказка" id="27"/>
-		</InputField>
-		<InputField name="ПаспортныеДанные" id="28">
-			<DataPath>Объект.ПаспортныеДанные</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ПаспортныеДанныеКонтекстноеМеню" id="29"/>
-			<ExtendedTooltip name="ПаспортныеДанныеРасширеннаяПодсказка" id="30"/>
-		</InputField>
+		<UsualGroup name="Группа2" id="27">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Пол" id="29">
+					<DataPath>Объект.Пол</DataPath>
+					<ContextMenu name="ПолКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="Телефон" id="19">
+					<DataPath>Объект.Телефон</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="СерияНомерПаспорта" id="10">
+					<DataPath>Объект.СерияНомерПаспорта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СерияНомерПаспортаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СерияНомерПаспортаРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="Адрес" id="16">
+					<DataPath>Объект.Адрес</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АдресКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="Должность" id="32">
+					<DataPath>Объект.Должность</DataPath>
+					<ContextMenu name="ДолжностьКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ДолжностьПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Оклад" id="35">
+					<DataPath>Объект.Оклад</DataPath>
+					<ContextMenu name="ОкладКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="Стаж" id="13">
+					<DataPath>Объект.Стаж</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Mask>99 мес.</Mask>
+					<ContextMenu name="СтажКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СтажРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
