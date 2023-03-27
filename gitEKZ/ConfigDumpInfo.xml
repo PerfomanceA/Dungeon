@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.13">
+	<ConfigVersions>
+		<Metadata name="Configuration.Конфигурация" id="f42e4d99-899d-47f9-a6ff-fe64cbf73f70" configVersion="fa7639179207674f9ce2e31c905e061700000000"/>
+		<Metadata name="Constant.ПроцентНДС" id="5fe254fc-fccf-416f-b399-6dfded19c62e" configVersion="5046cfe5fa4e294cab121cbf4b0b78c100000000"/>
+		<Metadata name="Document.ЗаказТовара" id="f2913c74-39f0-47a6-9138-4706719626cd" configVersion="5e92634c4f7fb549a4e61522fb6a1ddd00000000">
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1.Attribute.НДС" id="05463369-64b2-4066-9628-ff0afca21a5a"/>
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1.Attribute.Цена" id="2c63b6d5-cb5f-490d-9861-c3b05790201d"/>
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1.Attribute.Сумма" id="5ce7a388-f28b-4b2a-a026-b79bb2881875"/>
+			<Metadata name="Document.ЗаказТовара.Attribute.ОбщаяСуммаСНДС" id="683e07f8-5a57-4f2e-9a69-e5853a49e732"/>
+			<Metadata name="Document.ЗаказТовара.Attribute.НДС" id="81ca31c9-24fa-4a8b-87e7-5969022d4621"/>
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1.Attribute.Материалы" id="82e80448-6a24-4eeb-a578-32ceaa6459d2"/>
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1" id="c9e4e2e8-af30-48a0-a3b8-8c7d31b9dbc6"/>
+			<Metadata name="Document.ЗаказТовара.TabularSection.ТабличнаяЧасть1.Attribute.Количество" id="dc60e90a-8da7-45f9-a4dc-7e9f1b910666"/>
+			<Metadata name="Document.ЗаказТовара.Attribute.ОбщаяСуммаДоНДС" id="e3cd4e81-d0c3-4637-b4eb-882644dc5baa"/>
+		</Metadata>
+		<Metadata name="Document.ЗаказТовара.Form.ФормаДокумента" id="b20ecdeb-546e-45be-9fdb-509e9b3c3de0" configVersion="ad664a6951b9304fbde234cee9e3335200000000"/>
+		<Metadata name="Document.ЗаказТовара.Form.ФормаДокумента.Form" id="b20ecdeb-546e-45be-9fdb-509e9b3c3de0.0" configVersion="92c1596c85a3004191f802e7120688b900000000"/>
+		<Metadata name="Language.Русский" id="7cf6c6b7-f439-42a7-9cda-7b5b43cef9e2" configVersion="dd5257d3d7b9724093b3d18fcd87c69500000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
